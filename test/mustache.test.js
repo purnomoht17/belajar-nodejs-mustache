@@ -2,9 +2,9 @@ import Mustache from "mustache"
 import fs from "fs/promises"
 
 test("Menggunakan Mustache", () => {
-    const data = Mustache.render("Hello {{name}}", {name: "Eko"});
-    // Hello Eko
-    expect(data).toBe("Hello Eko");
+    const data = Mustache.render("Hello {{name}}", {name: "Heru"});
+    // Hello Heru
+    expect(data).toBe("Hello Heru");
 });
 
 
@@ -18,6 +18,7 @@ test("Menggunakan Mustache Cache", () => {
 
 
 test("Tags", () => {
+    // {{{}}} unutk menerima HTML
     const data = Mustache.render("Hello {{name}}, my hobby is {{{hobby}}}", {
         name: "Eko",
         hobby: "<b>Programming</b>"
@@ -29,11 +30,11 @@ test("Tags", () => {
 test("Nested Object", () => {
     const data = Mustache.render("Hello {{person.name}}", {
         person: {
-            name: "Eko"
+            name: "Heru"
         }
     });
-    // Hello Eko
-    expect(data).toBe("Hello Eko");
+    // Hello Heru
+    expect(data).toBe("Hello Heru");
 });
 
 test("Mustache File", async () => {
@@ -68,7 +69,6 @@ test("Mustache Sections Show", async () => {
     console.info(data);
     expect(data).toContain("Hello Person");
 });
-
 
 test("Sections Data", async () => {
     const helloTemplate = await fs.readFile("./templates/person.mustache")
@@ -150,23 +150,23 @@ test("Comment", async () => {
 });
 
 test("Partials", async () => {
-    const contentTemplate = await fs.readFile("./templates/content.mustache")
-        .then(data => data.toString());
     const headerTemplate = await fs.readFile("./templates/header.mustache")
+        .then(data => data.toString());
+    const contentTemplate = await fs.readFile("./templates/content.mustache")
         .then(data => data.toString());
     const footerTemplate = await fs.readFile("./templates/footer.mustache")
         .then(data => data.toString());
 
     const data = Mustache.render(contentTemplate, {
-        title: "Eko",
+        title: "Heru",
         content: "Belajar Mustache JS"
     }, {
         header: headerTemplate,
         footer: footerTemplate
-    });
+    })
 
     console.info(data);
-    expect(data).toContain("Eko");
+    expect(data).toContain("Heru");
     expect(data).toContain("Belajar Mustache JS");
     expect(data).toContain("Powered by Programmer Zaman Now");
 });

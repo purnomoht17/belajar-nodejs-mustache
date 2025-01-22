@@ -1,0 +1,107 @@
+Berikut adalah semua isi file PDF Anda:
+
+---
+
+**NodeJS Mustache**
+
+Eko Kurniawan Khannedy
+
+- Technical architect at one of the biggest e-commerce company in Indonesia  
+- 12+ years experiences  
+- www.programmerzamannow.com  
+- youtube.com/c/ProgrammerZamanNow  
+
+**Kontak:**  
+- Telegram: @khannedy  
+- Facebook: fb.com/ProgrammerZamanNow  
+- Instagram: instagram.com/programmerzamannow  
+- Youtube: youtube.com/c/ProgrammerZamanNow  
+- TikTok: tiktok.com/@programmerzamannow  
+- Email: echo.khannedy@gmail.com  
+
+---
+
+**Sebelum Belajar**
+1. Sudah mengikuti kelas JavaScript Programmer Zaman Now.  
+2. NodeJS Dasar, Unit Test, Logging, dan ExpressJS.  
+
+**Agenda**
+1. Pengenalan Mustache  
+2. Tags  
+3. Sections  
+4. Inverted Sections  
+5. Functions  
+6. Partials  
+7. Dan lain-lain  
+
+---
+
+**Pengenalan Mustache**
+- Mustache adalah library untuk Template Engine.  
+- Dengan menggunakan Mustache, kita dapat membuat kode template yang fleksibel.  
+- Mustache sangat sederhana dan mudah dipelajari.  
+- Mustache adalah standar yang dapat digunakan di banyak teknologi dan bahasa pemrograman.  
+
+Referensi:  
+- [Dokumentasi Mustache](https://mustache.github.io/)  
+- [Standarisasi Mustache](https://mustache.github.io/mustache.5.html)  
+
+---
+
+**NodeJS Mustache**
+- Implementasi Mustache di NodeJS menggunakan library MustacheJS.  
+- [GitHub MustacheJS](https://github.com/janl/mustache.js/)  
+- [NPM Mustache](https://www.npmjs.com/package/mustache)  
+
+**Langkah Awal:**
+1. Clone project belajar-nodejs-unit-test ([Repository GitHub](https://github.com/ProgrammerZamanNow/belajar-nodejs-unit-test))  
+2. Tambahkan dependency menggunakan MustacheJS.  
+
+---
+
+**Menggunakan Mustache JS**
+- Function `render(template, data)` digunakan untuk merender template dan data.  
+- **Mustache Cache**: Template di-cache untuk mempercepat render berikutnya.  
+
+---
+
+**Tags**
+- Menggunakan `{{name}}` untuk mengirim data dari luar template.  
+- Escape default HTML dalam tags. Gunakan `{{{kode}}}` untuk menampilkan HTML.  
+
+**Nested Object**
+- Gunakan `{{person.name}}` untuk data nested.  
+
+---
+
+**Sections**
+- Logika sederhana seperti if-else dapat dilakukan menggunakan `{{#nama}}` dan `{{/nama}}`.  
+- Data sections otomatis diakses tanpa menyebut nama sections.  
+
+**Inverted Sections**
+- Gunakan `{{^nama}}` untuk blok yang dieksekusi ketika nilai sections falsy (null, undefined, false, dsb.).  
+
+---
+
+**List**
+- Data berbentuk list atau array dapat ditampilkan menggunakan sections (`{{.}}`).  
+
+**Functions**
+- Tags dapat menggunakan function yang memanipulasi hasil render.  
+
+---
+
+**Comment**
+- Komentar di template ditulis menggunakan `{{! komentar }}`.  
+
+**Partials**
+- Template dapat dibagi menjadi bagian kecil seperti header, content, footer, menggunakan `{{> namaPartial}}`.  
+
+---
+
+**Materi Selanjutnya**
+- NodeJS Database  
+
+---
+
+Apakah Anda ingin mengetik ulang dalam format tertentu?
